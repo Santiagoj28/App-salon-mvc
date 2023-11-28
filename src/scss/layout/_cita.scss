@@ -1,0 +1,55 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+.seccion{
+    padding: 5rem 0;
+    display: none;
+    .text-center{
+        text-align: center;
+    }
+   
+}    
+.mostrar{
+    display: block;
+
+}
+.ocultar{
+    display: none;
+
+}
+.barra{
+
+    margin: v.$separacion 0;
+    text-align: center;
+    font-weight: bold;
+    @include m.tablet{
+        display: flex;
+       justify-content: space-between;
+        gap: 1rem;
+        align-items: center;
+    }
+    .letter {
+        color: (lighten(v.$azul , 10));
+        letter-spacing: 0.4rem;
+        font-size: 1.6rem;
+        opacity: 0;
+        animation: appear 1s forwards;
+      }
+      
+      @keyframes appear {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+    }
+    .boton{
+        @include m.boton(v.$negro , v.$blanco);
+        font-size: 1.9rem;
+        
+        margin: 0;
+        border-radius: 1rem;
+    }
+}

@@ -1,0 +1,71 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.citas{
+   
+    list-style: none;
+    padding: 0;
+
+    h4{
+        text-align: center;
+        font-size: 2.4rem;
+    }
+
+    li{
+        border-top: 1px solid v.$gris;
+    }
+   
+    p{  
+        text-align: center;
+        color: v.$azul;
+        font-weight: v.$bold;
+    }
+span,
+.servicio{
+    text-align: center;
+ color: v.$blanco;
+ font-weight: v.$regular;
+}
+
+.total{
+    cursor: pointer;
+    font-size: 2.4rem;
+    
+    border: solid 1px v.$azul;
+    display: inline-block; /* Muestra el elemento como bloque en línea */
+    padding: 0.5rem 1rem; /* Ajusta el relleno según tus necesidades */
+    border-radius: 5px;  
+    
+}
+.precio{
+    font-weight: bold;
+    color: v.$verde
+}
+.id{
+    color: v.$azul;
+    font-weight: bold;
+}
+   
+}
+//Ver servicios 
+.total-eliminar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.servicios{
+ 
+    @extend .citas;
+    .acciones{
+        align-items: center;
+        justify-content: space-around;
+        margin: 0;
+    }
+    .boton,
+    .boton-eliminar {
+        margin: 1rem;
+    
+    }
+}
+
+

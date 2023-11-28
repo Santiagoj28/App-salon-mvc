@@ -1,0 +1,45 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contenedor-app{
+    @include m.tablet{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        min-height: 100vh;
+    }
+    .imagen{
+        
+        background-image: url(../img/1.jpg);
+        background-position: center;
+        background-size: cover;
+        height: 30rem;
+        @include m.tablet{
+            height:auto ;
+        }
+    }
+    .app{
+        width: 95%;
+        margin: 0 auto;
+        padding: 3rem;
+         @include m.tablet{
+            overflow: scroll;
+
+         }
+     
+        
+    }
+    
+}
+.barra-servicios{
+    margin-bottom: v.$separacion;
+    
+    @include m.tablet{
+        text-align: center;
+        display: flex;
+        justify-content: space-around;
+    }
+    .boton{
+        
+        margin: 0 0 1rem 0;
+    }
+}
